@@ -23,7 +23,7 @@ namespace MoneyMaker
             double silverCoins = Math.Floor(devideSilver);
             remainder = remainder % silverValue;
 
-
+            Console.WriteLine($"You waneed " + goldCoins + " gold coins");
             Console.WriteLine($"You need " + goldCoins + " gold coins");
             Console.WriteLine($"You need " + silverCoins + " silver coins");
             Console.WriteLine($"You need " + remainder + " bronze coins");
