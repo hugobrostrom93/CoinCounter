@@ -12,27 +12,21 @@ namespace MoneyMaker
             double amountDouble = Convert.ToDouble(amount);
             Console.WriteLine($"{amount} cents is equal to... ");
 
-            int goldCoin = 10;
-            int silverCoin = 5;
+            int guldValue = 10;
+            int silverValue = 5;
 
-            double devide = amountDouble / goldCoin;
-            double roundDown = Math.Floor(devide);
-            double goldCoins = Convert.ToDouble(roundDown);
-            double moduloOne = amountDouble % (goldCoin * goldCoins);
+            double devide = amountDouble / guldValue;
+            double goldCoins = Math.Floor(devide);
+            double remainder = amountDouble % goldCoins;
 
+            double devideSilver = remainder / silverValue;
+            double silverCoins = Math.Floor(devideSilver);
+            remainder = remainder % silverValue;
 
-            double devideS = moduloOne / silverCoin;
-            double roundDownS = Math.Floor(devideS);
-            double silverCoins = roundDownS;
-            double moduloTwo = moduloOne % (silverCoin * silverCoins);
-            Console.WriteLine(moduloTwo);
-            Console.WriteLine(moduloOne);
-            Console.WriteLine(silverCoin);
-            Console.WriteLine(silverCoins);
 
             Console.WriteLine($"You need " + goldCoins + " gold coins");
             Console.WriteLine($"You need " + silverCoins + " silver coins");
-            Console.WriteLine($"You need " + moduloTwo + " bronze coins");
+            Console.WriteLine($"You need " + remainder + " bronze coins");
 
 
 
