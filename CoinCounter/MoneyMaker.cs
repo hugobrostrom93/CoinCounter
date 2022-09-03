@@ -26,7 +26,7 @@ namespace MoneyMaker
             Console.WriteLine($"You need " + goldCoins + " gold coins");
             Console.WriteLine($"You need " + silverCoins + " silver coins");
             Console.WriteLine($"You need " + remainder + " bronze coins");
-
+           
 
 
         }
